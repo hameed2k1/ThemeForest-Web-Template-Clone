@@ -1,0 +1,209 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #edeae4;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #edeae4;
+  position: relative;  
+  z-index: 10;
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  font-size: 24px;
+  color: #3d372f;
+}
+
+.logo img {
+  height: 30px;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #8b7f6f;
+  font-weight: 900 !important;  /* Force it */
+  font-family: Arial, sans-serif; /* A font that supports bold well */
+  position: relative;
+  padding: 5px 0;
+}
+
+
+.menu a.active,
+.menu a:hover {
+  color: #f56331;
+}
+
+.menu a.active::after,
+.menu a:hover::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 2px;
+  background: #f56331;
+  width: 100%;
+}
+
+.menu a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: #f56331;
+  transition: width 0.3s ease;
+}
+
+.menu .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #444;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 150px;
+  z-index: 11;
+  font-weight: bold
+} 
+
+.menu .dropdown li a {
+  color: #fff;
+  padding: 10px 15px;
+  display: block;
+}
+
+.menu .dropdown li a:hover {
+  background: #555;
+}
+
+.hover-dropdown:hover .dropdown {
+  display: block;
+}
+
+.click-dropdown.open .dropdown {
+  display: block;
+}
+
+.app-btn {
+  background: #f56331;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Countdown styling */
+.event-countdown-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #272420;
+  padding: 20px;
+  color: #fff;
+}
+
+.event-date  {
+  color: #f56331;
+  font-size: 20px;
+}
+
+.countdown {
+  display: flex;
+  gap: 10px;
+}
+
+.count-box {
+  background: #3a3937;
+  padding: 10px;
+  text-align: center;
+}
+
+.count-box div {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.signup {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: auto
+}
+
+.signup input {
+  padding: 5px 10px;
+  border: none;
+  background: #3a3937;
+  color: #fff;
+}
+
+.signup button {
+  background: #f56331;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.hero {
+  position: relative;
+  height: 75vh;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-align: left;
+  padding: 50px;
+}
+
+.hero h1 {
+  font-size: 80px;
+  margin-bottom: 20px;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #ff4c00;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
